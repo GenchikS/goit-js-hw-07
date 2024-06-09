@@ -1,10 +1,12 @@
 const inputFormUser = document.querySelector(`.login-form`);
 const submit = document.querySelector(`.login-form`);
+const removeFocusBtn = document.querySelector('[data-action="remove"]');
+
     inputFormUser.addEventListener(`submit`, hendlerGetSubmit);
     
     function hendlerGetSubmit (event){
     event.preventDefault();
-    
+
     // console.log(`submit`);  // перевырка роботи submit
     // console.dir(event.currentTarget);  // перевірка форми
 
