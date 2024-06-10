@@ -2,7 +2,7 @@ const inputFormUser = document.querySelector(`.login-form`);
 const submit = document.querySelector(`.login-form`);
 const removeFocusBtn = document.querySelector('[data-action="remove"]');
 
-    inputFormUser.addEventListener(`submit`, hendlerGetSubmit);
+inputFormUser.addEventListener(`submit`, hendlerGetSubmit);
     
     function hendlerGetSubmit (event){
     event.preventDefault();
