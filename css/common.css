@@ -19,6 +19,7 @@ ul, li, h2{
   list-style-type: none;
 }
 
+/* tasck - 1*/
 .task-one-list{
   display: flex;
   flex-direction: column;
@@ -31,12 +32,10 @@ ul, li, h2{
 }
 
 .item{
-  
   border-radius: 8px;
   padding: 16px;
   width: 392px;
   height: auto;
-  
   background: #f6f6fe;
 }
 
@@ -67,9 +66,18 @@ ul, li, h2{
   align-items: center;
 }
 
-
+/* task - 2 */
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 1440px;
+  height: 848px;
+  background: #fff;
+  padding: 100px 156px;
+}
 
 img{
-  width: 250px;
-  height: 250px;
+  width: 360px;
+  height: 300px;
 }
