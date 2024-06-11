@@ -16,10 +16,14 @@ inputUser.addEventListener(`change`, (event)=> {
       console.log(event);  //  перевірка об'єкту
       console.log("create");  //  перевірка  clickUser
     if (divCreate >= 1 && divCreate <= 100 ){
-      for (let i = 0; i < divCreate; i++ ){
+      for (let i = 1; i <= divCreate; i++ ){
         const heading = document.createElement(`div`);
-        heading.classList.add("title")
+        heading.classList.add("title-task-six");
         boxes.append(heading);
+        const titleTaskSix = document.querySelector(`.title-task-six`)
+        titleTaskSix.style.width = "10px";
+        titleTaskSix.style.height = "10px";
+        titleTaskSix.style.backgroundColor = `#${Math.floor(Math.random() * 16777215 )}`
       };
     } else {console.log(`Введфть число від 1 до 100!`)};
     });
@@ -30,7 +34,7 @@ inputUser.addEventListener(`change`, (event)=> {
       console.log("delete");  //  перевірка  clickUser
       console.log(divCreate)  // перевірка введеного числа
     for (let i = divCreate; i != 0; i-- ){
-        const heading = document.querySelector(`.title`);
+        const heading = document.querySelector(`.title-task-six`);
         heading.remove();
       };
     });
