@@ -160,3 +160,33 @@ img{
   width: 360px;
   height: 40px;
 }
+
+/* task -5 */
+.widget{
+  border-radius: 8px;
+  width: 345px;
+  height: auto;
+  padding: 100px 88px;
+  background: #fff;
+}
+
+.widget-backgroundcolor{
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.change-color{
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  background: #4e75ff;
+}
