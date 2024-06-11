@@ -13,8 +13,8 @@ inputUser.addEventListener(`change`, (event)=> {
     const divCreate = event.currentTarget.value;
    
     createkUser.addEventListener(`click`, (event)=> {  //  добавлення <div>
-      console.log(event);  //  перевірка об'єкту
-      console.log("create");  //  перевірка  clickUser
+      // console.log(event);  //  перевірка об'єкту
+      // console.log("create");  //  перевірка  clickUser
     if (divCreate >= 1 && divCreate <= 100 ){
       for (let i = 1; i <= divCreate; i++ ){
         const heading = document.createElement(`div`);
@@ -29,8 +29,7 @@ inputUser.addEventListener(`change`, (event)=> {
     } else {console.log(`Введіть число від 1 до 100!`)};
     });
     event.currentTarget.value = "";
-
-
+    
     destroyUser.addEventListener(`click`, (event)=> {   //  видалення <div>
       console.log("delete");  //  перевірка  clickUser
       console.log(divCreate)  // перевірка введеного числа
