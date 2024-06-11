@@ -20,9 +20,10 @@ inputUser.addEventListener(`change`, (event)=> {
         const heading = document.createElement(`div`);
         heading.classList.add("title-task-six");
         boxes.append(heading);
+
         const titleTaskSix = document.querySelector(`.title-task-six`)
-        titleTaskSix.style.width = "10px";
-        titleTaskSix.style.height = "10px";
+        titleTaskSix.style.width = `${ i * 10 }px`;
+        titleTaskSix.style.height =  `${ i * 10 }px`;
         titleTaskSix.style.backgroundColor = `#${Math.floor(Math.random() * 16777215 )}`
       };
     } else {console.log(`Введфть число від 1 до 100!`)};

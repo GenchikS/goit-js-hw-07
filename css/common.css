@@ -212,7 +212,7 @@ img{
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
-  text-align: right;
+  text-align: center;
   color: #2e2f42;
   border: 1px solid #808080;
   border-radius: 8px;
@@ -246,6 +246,9 @@ button[data-destroy]{
 }
 
 #boxes{
+  display: flex;
+  flex-direction: row;
+  gap: 44px;
   border-radius: 8px;
   padding: 32px;
   min-width: auto;
