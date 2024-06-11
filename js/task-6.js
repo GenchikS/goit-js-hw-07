@@ -26,7 +26,7 @@ inputUser.addEventListener(`change`, (event)=> {
         titleTaskSix.style.height =  `${ i * 10 }px`;
         titleTaskSix.style.backgroundColor = `#${Math.floor(Math.random() * 16777215 )}`
       };
-    } else {console.log(`Введфть число від 1 до 100!`)};
+    } else {console.log(`Введіть число від 1 до 100!`)};
     });
     event.currentTarget.value = "";
 
