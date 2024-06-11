@@ -2,7 +2,7 @@ const inputFormUser = document.querySelector(`.login-form`);
 const submit = document.querySelector(`.login-form`);
 const removeFocusBtn = document.querySelector('[data-action="remove"]');
 
-inputFormUser.addEventListener(`ubmit`, hendlerGetSubmit);
+inputFormUser.addEventListener(`submit`, hendlerGetSubmit);
     
     function hendlerGetSubmit (event){
     event.preventDefault();
@@ -22,7 +22,8 @@ inputFormUser.addEventListener(`ubmit`, hendlerGetSubmit);
             password: passwordUser,
         }
         console.dir(data);
-        }
+        document.querySelector(`.login-form`).reset();
+    }
 }
 
 

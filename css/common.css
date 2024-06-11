@@ -83,7 +83,7 @@ img{
 }
 
 /* tasck - 3 */
-.container-task-3{
+.container-task-three{
   border-radius: 8px;
   padding: 24px;
   width: 408px;
@@ -91,7 +91,7 @@ img{
   background: #fff;
 }
 
-.input-task-3{
+.input-task-three{
   display: flex;
   font-family: Montserrat;
   font-weight: 400;
@@ -108,11 +108,55 @@ img{
   margin-bottom: 16px;
 };
 
-.title-task-3{
+.title-task-three{
   font-family: Montserrat;
   font-weight: 600;
   font-size: 24px;
   line-height: 133%;
   letter-spacing: 0.04em;
   color: #2e2f42;
+}
+
+
+/* task - 4 */
+.login-form{
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 256px;
+  background: #fff;
+  padding: 24px;
+}
+
+.label-form{
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  padding-bottom: 16px;
+  color: #2e2f42;
+}
+
+.button-task-four{
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  color: #fff;
+  background: #4e75ff;
+}
+
+.input-form{
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
 }
