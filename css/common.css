@@ -13,7 +13,7 @@ body {
   line-height: 1.5;
 }
 
-ul, li, h2{
+ul, li, h1, h2{
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -80,4 +80,39 @@ ul, li, h2{
 img{
   width: 360px;
   height: 300px;
+}
+
+/* tasck - 3 */
+.container-task-3{
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 136px;
+  background: #fff;
+}
+
+.input-task-3{
+  display: flex;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding-left: 16px;
+  align-content: center;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  margin-bottom: 16px;
+};
+
+.title-task-3{
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
