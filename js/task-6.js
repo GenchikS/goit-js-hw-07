@@ -7,12 +7,14 @@ const destroyUser = document.querySelector(`button[data-destroy]`);
 
 inputUser.addEventListener(`change`, (event)=> {
   event.preventDefault();
+  
   // console.log(event);  //  перевірка об'єкту
     // console.log(event.currentTarget.value);  //  перевірка вводу
     const divCreate = event.currentTarget.value;
    
     createkUser.addEventListener(`click`, (event)=> {  //  добавлення <div>
-      // console.log("create");  //  перевірка  clickUser
+      console.log(event);  //  перевірка об'єкту
+      console.log("create");  //  перевірка  clickUser
     if (divCreate >= 1 && divCreate <= 100 ){
       for (let i = 0; i < divCreate; i++ ){
         const heading = document.createElement(`div`);
@@ -20,15 +22,14 @@ inputUser.addEventListener(`change`, (event)=> {
         boxes.append(heading);
       };
     } else {console.log(`Введфть число від 1 до 100!`)};
-    
     });
     event.currentTarget.value = "";
 
-    destroyUser.addEventListener(`click`, (event)=> {   //  видалення <div>
-      // console.log("delete");  //  перевірка  clickUser
-      // console.log(divCreate)  // перевірка введеного числа
 
-      for (let i = divCreate; i != 0; i-- ){
+    destroyUser.addEventListener(`click`, (event)=> {   //  видалення <div>
+      console.log("delete");  //  перевірка  clickUser
+      console.log(divCreate)  // перевірка введеного числа
+    for (let i = divCreate; i != 0; i-- ){
         const heading = document.querySelector(`.title`);
         heading.remove();
       };
