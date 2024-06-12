@@ -1,18 +1,11 @@
 const categories = document.querySelectorAll(`.item`);
-const categoriesAll = Array.from(categories);
-console.log(`Number of categories: ${categoriesAll.length}`)
-// categoriesAll.result ()
+console.log(`Number of categories: ${categories.length}`)
 
-// console.log(categoriesAll);
-// const category = document.querySelectorAll(`.item>h2`);
-
-
-
-const result =  compelArr.forEach(function(category, index, el){
-
-    // const elements = document.querySelectorAll(`.list`);
-    console.log(category)
-    // console.dir(`Category: ${category.textContent}`);
-    // console.log(`Elements:`, elements.length);
+categories.forEach((item) => {
+    const title = item.querySelector("h2").textContent;
+    const list = item.querySelectorAll("ul>li");  //  звернення до li через батька ul 
+    console.log(`Cetegory: ${title}`);
+    console.log(`Elements: ${list.length}`) //  перевірка довжини
 })
+
 
