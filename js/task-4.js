@@ -11,8 +11,8 @@ inputFormUser.addEventListener(`submit`, hendlerGetSubmit);
     // console.dir(event.currentTarget);  // перевірка форми
 
     const {email, password} = event.currentTarget.elements;  //  деструктурізація введених знавчень
-    const emailUser = (email.value).replace(" ", "");
-    const passwordUser = (password.value).replace(" ", "");
+    const emailUser = (email.value).trim();
+    const passwordUser = (password.value).trim();
     
     if(emailUser === "" || passwordUser === "") {
         alert (`All form fields must be filled in`)
