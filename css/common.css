@@ -252,6 +252,6 @@ button[data-destroy]{
   border-radius: 8px;
   padding: 32px;
   min-width: auto;
-  max-height: auto;
+  min-height: auto;
   background: #f6f6fe;
 }
