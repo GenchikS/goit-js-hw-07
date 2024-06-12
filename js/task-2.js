@@ -29,22 +29,22 @@ const images = [
 const gallery = document.querySelector(`.gallery`);
 
 function galleryAll (arr){
-  return arr.map(({url, alt}) => {
-    const liElem = document.createElement(`li`);
-    const imgElem = document.createElement(`img`);
+  return arr.map(({url, alt}) => {  //  об'экт
+    const liElem = document.createElement(`li`);  //  створення li
+    const imgElem = document.createElement(`img`);  //  створення img
 
-    liElem.setAttribute("url", url); 
-    liElem.setAttribute("alt", alt);
+    liElem.setAttribute("url", url);  // додавання атребуту  
+    liElem.setAttribute("alt", alt);  // додавання атребуту
 
-    imgElem.src = url;
-    imgElem.alt = alt;
-    imgElem.style.width = `360px`;
-    imgElem.style.height = `300px`;
+    imgElem.src = url;  //  присвоєння елементу з об'экту
+    imgElem.alt = alt;  //  присвоєння елементу з об'экту
+    imgElem.style.width = `360px`;  //  стилізація width
+    imgElem.style.height = `300px`;  // стилізація height
 
-    liElem.append(imgElem);
+    liElem.append(imgElem);  //  додавання елементу
     return liElem;
   });
 }
 
-gallery.append(...galleryAll(images));
+gallery.append(...galleryAll(images));  
 
