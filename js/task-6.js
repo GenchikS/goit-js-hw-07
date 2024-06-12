@@ -1,54 +1,53 @@
-const inputUser = document.querySelector(`.input`);
+let inputUser = document.querySelector(`.input`);
 const createClickUser = document.querySelector(`button[data-create]`)
 const destroyClickUser = document.querySelector(`button[data-destroy]`)
 
+      let widthUser = 0;
+      let heighthUser = 0;
 
-inputUser.addEventListener(`change`, (event) => {
-  event.preventDefault();
-  let inputUser = event.currentTarget.value;
-      event.currentTarget.value = "";  //  видалення введеного числа
-     // console.log((inputUser));  //  перевірка вводу
-      
-      let widthUser = 10;
-      let heighthUser = 10;
-
+  inputUser.addEventListener("change", inputUserChenge);
   createClickUser.addEventListener("click", createClick);
   destroyClickUser.addEventListener("click", destroyClick);
 
+function inputUserChenge(event) {
+      event.preventDefault();
+      boxes.innerHTML = "";  //  видалення попереднього вводу
+      inputUser = event.currentTarget.value;
+      event.currentTarget.value = "";  //  видалення введеного числа
+      // console.log((inputUser));  //  перевірка вводу
+      
+};
 
-  function createClick(){
+function createClick(){
+  if (inputUser >= 1 && inputUser <= 100 ){
+    // console.log((inputUser));   //  перевірка  clickUser
+          for (let i = 1; i <= inputUser; i++ ){
+            widthUser = widthUser + 10;
+            heighthUser = heighthUser + 10;
 
-    if (inputUser >= 1 && inputUser <= 100 ){
-      // console.log((inputUser));   //  перевірка  clickUser
-            for (let i = 1; i <= inputUser; i++ ){
-              widthUser = widthUser + 10;
-              heighthUser = heighthUser + 10;
+            // console.log(widthUser);   //  перевірка  накопичувача
+            // console.log(heighthUser);  //  перевірка  накопичувача
+            // console.log((inputUser));  //  перевірка  циклу
 
-              // console.log(widthUser);   //  перевірка  накопичувача
-              // console.log(heighthUser);  //  перевірка  накопичувача
-              // console.log((inputUser));  //  перевірка  циклу
-
-              const heading = document.createElement(`div`);
-              heading.classList.add(`title-task-six`);
-              boxes.append(heading);
-              heading.style.width = `${widthUser}px`;
-              heading.style.height =  `${heighthUser}px`;
-              heading.style.backgroundColor = getRandomHexColor();
-
-              function getRandomHexColor() {   //  використання ф-ції для генерації кольору 
-                return `#${Math.floor(Math.random() * 16777215)
-                  .toString(16)
-                  .padStart(6, 0)}`;
-              }
-             }
-            } 
+            const heading = document.createElement(`div`);
+            heading.classList.add(`title-task-six`);
+            boxes.append(heading);
+            heading.style.width = `${widthUser}px`;
+            heading.style.height =  `${heighthUser}px`;
+            heading.style.backgroundColor = getRandomHexColor();
+            }
             inputUser = 0;
-    };
- 
-        
+            widthUser = 0;
+            heighthUser = 0;
+          } 
+  };
 
-    function destroyClick() {   //  ф-ція видалення вмісту контейнера boxes
-          boxes.innerHTML = "";  
-    }
-});
+function destroyClick() {   //  ф-ція видалення вмісту контейнера boxes
+    boxes.innerHTML = "";  
+}
 
+function getRandomHexColor() {   //  використання ф-ції для генерації кольору 
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
