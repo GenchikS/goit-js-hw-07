@@ -51,29 +51,29 @@ const destroyClickUser = document.querySelector(`button[data-destroy]`)
 inputUser.addEventListener(`change`, (event) => {
   event.preventDefault();
   const inputUser = event.currentTarget.value; 
-  console.log((inputUser));  //  перевірка вводу
-
-  let widthUser = 10;
-  let heighthUser = 10;
+  event.currentTarget.value = "";
+      // console.log((inputUser));  //  перевірка вводу
+      
+      let widthUser = 10;
+      let heighthUser = 10;
 
   createClickUser.addEventListener("click", createClick);
+destroyClickUser.addEventListener("click", destroyClick);
 
-  destroyClickUser.addEventListener("click", destroyClick);
-  
+
   function createClick(){
-
     if (inputUser >= 1 && inputUser <= 100 ){
-      console.log((inputUser));   //  перевірка  clickUser
+      // console.log((inputUser));   //  перевірка  clickUser
             for (let i = 1; i <= inputUser; i++ ){
               widthUser = widthUser + 10;
               heighthUser = heighthUser + 10;
 
-              console.log(widthUser);   //  перевірка  накопичувача
-              console.log(heighthUser);  //  перевірка  накопичувача
+              // console.log(widthUser);   //  перевірка  накопичувача
+              // console.log(heighthUser);  //  перевірка  накопичувача
               // console.log((inputUser));  //  перевірка  циклу
 
               const heading = document.createElement(`div`);
-              heading.classList.add("title-task-six");
+              heading.classList.add(`title-task-six`);
               boxes.append(heading);
               heading.style.width = `${widthUser}px`;
               heading.style.height =  `${heighthUser}px`;
@@ -87,12 +87,13 @@ inputUser.addEventListener(`change`, (event) => {
 
             };
           } else {alert(`Введіть число від 1 до 100!`)};
+          // document.querySelector(`.input`).reset();
+         
     };
-    event.currentTarget.value = "";
+        
 
-    function destroyClick() {
-        const heading = document.querySelectorAll(`div`);
-        boxes.removeChild();
+    function destroyClick() {   //  ф-ція видалення вмісту контейнера boxes
+          boxes.innerHTML = "";  
     }
 });
 
