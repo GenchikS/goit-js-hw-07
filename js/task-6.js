@@ -45,6 +45,7 @@
 
 const inputUser = document.querySelector(`.input`);
 const createClickUser = document.querySelector(`button[data-create]`)
+const destroyClickUser = document.querySelector(`button[data-destroy]`)
 
 
 inputUser.addEventListener(`change`, (event) => {
@@ -56,6 +57,8 @@ inputUser.addEventListener(`change`, (event) => {
   let heighthUser = 10;
 
   createClickUser.addEventListener("click", createClick);
+
+  destroyClickUser.addEventListener("click", destroyClick);
   
   function createClick(){
 
@@ -86,5 +89,10 @@ inputUser.addEventListener(`change`, (event) => {
           } else {alert(`Введіть число від 1 до 100!`)};
     };
     event.currentTarget.value = "";
+
+    function destroyClick() {
+        const heading = document.querySelectorAll(`div`);
+        boxes.removeChild();
+    }
 });
 
