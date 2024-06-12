@@ -17,6 +17,7 @@ inputUser.addEventListener(`change`, (event) => {
 
 
   function createClick(){
+
     if (inputUser >= 1 && inputUser <= 100 ){
       // console.log((inputUser));   //  перевірка  clickUser
             for (let i = 1; i <= inputUser; i++ ){
@@ -39,9 +40,9 @@ inputUser.addEventListener(`change`, (event) => {
                   .toString(16)
                   .padStart(6, 0)}`;
               }
-             };
-            } else {alert(`Введіть число від 1 до 100!`)};
-          inputUser = "0";
+             }
+            } 
+            inputUser = 0;
     };
  
         
