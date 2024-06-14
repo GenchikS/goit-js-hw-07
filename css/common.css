@@ -225,8 +225,8 @@ button[data-create]{
   color: #fff;
   border-radius: 8px;
   width: 120px;
-  height: 40px;
   background: #4e75ff;
+  height: 40px;
 }
 
 
@@ -245,6 +245,7 @@ button[data-destroy]{
 #boxes{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 44px;
   border-radius: 8px;
   padding: 32px;

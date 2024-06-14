@@ -1,27 +1,30 @@
-let inputUser = document.querySelector(`.input`);
+let inputUser = document.querySelector(`input`);
 const createClickUser = document.querySelector(`button[data-create]`)
 const destroyClickUser = document.querySelector(`button[data-destroy]`)
 
-      let widthUser = 0;
-      let heighthUser = 0;
+      let widthUser = 20;
+      let heighthUser = 20;
 
-  inputUser.addEventListener("change", inputUserChenge);
+  // inputUser.addEventListener("input", inputUserChenge);
   createClickUser.addEventListener("click", createClick);
   destroyClickUser.addEventListener("click", destroyClick);
 
-function inputUserChenge(event) {
-      event.preventDefault();
-      boxes.innerHTML = "";  //  видалення попереднього вводу
-      inputUser = event.currentTarget.value;
-      event.currentTarget.value = "";  //  видалення введеного числа
-      // console.log((inputUser));  //  перевірка вводу
+// function inputUserChenge(event) {
+//       event.preventDefault();
+//       boxes.innerHTML = "";  //  видалення попереднього вводу
+//       inputUser = event.currentTarget.value;
+//       event.currentTarget.value = "";  //  видалення введеного числа
+//       console.log((inputUser));  //  перевірка вводу
       
-};
+// };
 
 function createClick(){
-  if (inputUser >= 1 && inputUser <= 100 ){
+  boxes.innerHTML = "";  
+  if (inputUser.value >= 1 && inputUser.value <= 100 ){
     // console.log((inputUser));   //  перевірка  clickUser
-          for (let i = 1; i <= inputUser; i++ ){
+    let heading  = [];
+    let headingAll  = [];
+          for (let i = 1; i <= inputUser.value; i++ ){
             widthUser = widthUser + 10;
             heighthUser = heighthUser + 10;
 
@@ -29,16 +32,16 @@ function createClick(){
             // console.log(heighthUser);  //  перевірка  накопичувача
             // console.log((inputUser));  //  перевірка  циклу
 
-            const heading = document.createElement(`div`);
-            heading.classList.add(`title-task-six`);
-            boxes.append(heading);
+            heading = document.createElement(`div`);
             heading.style.width = `${widthUser}px`;
             heading.style.height =  `${heighthUser}px`;
             heading.style.backgroundColor = getRandomHexColor();
+            headingAll.push(heading)
             }
-            inputUser = 0;
-            widthUser = 0;
-            heighthUser = 0;
+            boxes.append(...headingAll);
+            // inputUser.value = 0;
+            widthUser = 20;
+            heighthUser = 20;
           } 
   };
 
