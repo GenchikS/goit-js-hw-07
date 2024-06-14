@@ -5,18 +5,8 @@ const destroyClickUser = document.querySelector(`button[data-destroy]`)
       let widthUser = 20;
       let heighthUser = 20;
 
-  // inputUser.addEventListener("input", inputUserChenge);
   createClickUser.addEventListener("click", createClick);
   destroyClickUser.addEventListener("click", destroyClick);
-
-// function inputUserChenge(event) {
-//       event.preventDefault();
-//       boxes.innerHTML = "";  //  видалення попереднього вводу
-//       inputUser = event.currentTarget.value;
-//       event.currentTarget.value = "";  //  видалення введеного числа
-//       console.log((inputUser));  //  перевірка вводу
-      
-// };
 
 function createClick(){
   boxes.innerHTML = "";  
@@ -28,10 +18,6 @@ function createClick(){
             widthUser = widthUser + 10;
             heighthUser = heighthUser + 10;
 
-            // console.log(widthUser);   //  перевірка  накопичувача
-            // console.log(heighthUser);  //  перевірка  накопичувача
-            // console.log((inputUser));  //  перевірка  циклу
-
             heading = document.createElement(`div`);
             heading.style.width = `${widthUser}px`;
             heading.style.height =  `${heighthUser}px`;
@@ -39,7 +25,6 @@ function createClick(){
             headingAll.push(heading)
             }
             boxes.append(...headingAll);
-            // inputUser.value = 0;
             widthUser = 20;
             heighthUser = 20;
           } 
