@@ -29,6 +29,7 @@ const images = [
 const gallery = document.querySelector(`.gallery`);
 
 function galleryAll (arr){
+
   return arr.map(({url, alt}) => {  //  об'экт
     const liElem = document.createElement(`li`);  //  створення li
     const imgElem = document.createElement(`img`);  //  створення img
@@ -42,6 +43,7 @@ function galleryAll (arr){
     imgElem.style.height = `300px`;  // стилізація height
 
     liElem.append(imgElem);  //  додавання елементу
+    
     return liElem;
   });
 }
