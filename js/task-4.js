@@ -22,7 +22,7 @@ inputFormUser.addEventListener(`submit`, hendlerGetSubmit);
             password: passwordUser,
         }
         console.dir(data);
-        document.querySelector(`.login-form`).reset();
+        document.querySelector(`.login-form`).reset();  //  очищення форми
     }
 }
 

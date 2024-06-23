@@ -11,7 +11,6 @@ function getRandomHexColor() {   //  використання ф-ції для �
           .toString(16)
           .padStart(6, 0)}`;  //  переклад для виводу на rgb
           color.textContent = changeColor.style.backgroundColor;
-
   return 
 }
 
